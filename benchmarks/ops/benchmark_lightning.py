@@ -21,6 +21,8 @@ from fla.ops.lightning_attn import chunk_lightning_attn
         styles=[("green", "-")],
         # styles=[('green', '-'), ('blue', '--'), ('red', '-.'),
         #         ('cyan', ':'), ('yellow', 'dotted'), ('cyan', '--'), ('cyan', '-'), ('black', ':')], ylabel="Execution Time (ms)",  # label name for the y-axis # name for the plot. Used also as a file name for saving the plot.  plot_name="Performance",
+        ylabel="Executing Tims(ms)",
+        plot_name="Performance",
         args={},
     ),
 )
@@ -47,4 +49,5 @@ def benchmark(T, provider):
 
 
 if __name__ == "__main__":
-    benchmark.run(print_data=True)
+    benchmark.run(print_data=True, save_path=".")
+
